@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-
+<h2>Create</h2>
 @using (Html.BeginForm("Create", "Courses"))
 {
     <div class="form-group">
@@ -29,5 +29,9 @@
         @Html.ValidationMessageFor(m => m.Category)
     </div>
     <button type="submit" value="Save" class="btn btn-primary">Save</button>
+}
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryval");
 }
 
